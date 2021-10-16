@@ -1,16 +1,35 @@
 <?php 
+namespace App\Src;
 use Dompdf\Dompdf;
+use phpDocumentor\Reflection\Types\Integer;
 use PHPMailer\PHPMailer\PHPMailer;
 
-function get_view($view_name) {
-  $view = VIEWS.$view_name.'View.php';
-  if(!is_file($view)) {
-    die('La vista no existe');
-  }
+class Functions 
+{
 
-  // Existe la vista
-  require_once $view;
+  public static function hello():string
+  {
+      return 'hello';
+  }
+  public static function calculate()
+  {
+      return 1+1;
+  }
+  public static function get_view($view_name) {
+    $view = $_SERVER["DOCUMENT_ROOT"].'\udemy_cotizador\templates\views\\'.$view_name.'View.php';
+       // echo $_SERVER["DOCUMENT_ROOT"];
+    if(!is_file($view)) {
+      // die('La vista no existe');
+      return $view;
+    }
+  
+    // Existe la vista
+    require_once $view;
+  }
 }
+
+
+
 
 // Cotización
 // new_quote []
@@ -469,7 +488,6 @@ function hook_generate_quote() {
   $download     = sprintf(URL.'pdf.php?number=%s', $quote['number']); // pdf.php?number=123456
   $quote['url'] = $download;
 
-<<<<<<< HEAD
   // Generar pdf y guardarlo en servidor
   if(!generate_pdf(UPLOADS.$filename, $html)) {
     json_output(json_build(400, null, 'Hubo un problema al generar la cotización.'));
@@ -551,6 +569,3 @@ function hook_send_quote() {
 
   json_output(json_build(200, $quote, 'Cotización enviada con éxito.'));
 }
-=======
-}
->>>>>>> 2062c053957201c9744712912450e1f2bad88e93

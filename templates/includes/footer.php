@@ -5,7 +5,6 @@
         <a href="#">Arriba</a>
       </p>
       <p><a href="https://getbootstrap.com/">Cotizador App</a> &copy;. Todos los derechos reservados <?php echo date('Y'); ?>.</p>
-      
     </div>
   </footer>
   <!-- ends footer -->
