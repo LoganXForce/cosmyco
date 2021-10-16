@@ -5,7 +5,10 @@
         <div class="row">
           <div class="col-sm-8 col-md-7 py-4">
             <h4 class="text-white">Nosotros</h4>
+<<<<<<< HEAD
             <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+=======
+>>>>>>> 2062c053957201c9744712912450e1f2bad88e93
           </div>
           <div class="col-sm-4 offset-md-1 py-4">
             <h4 class="text-white">Contacto</h4>
@@ -29,4 +32,8 @@
       </div>
     </div>
   </header>
+<<<<<<< HEAD
   <!-- ends navbar -->
+=======
+  <!-- ends navbar -->
+>>>>>>> 2062c053957201c9744712912450e1f2bad88e93

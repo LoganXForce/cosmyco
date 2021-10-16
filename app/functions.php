@@ -469,6 +469,7 @@ function hook_generate_quote() {
   $download     = sprintf(URL.'pdf.php?number=%s', $quote['number']); // pdf.php?number=123456
   $quote['url'] = $download;
 
+<<<<<<< HEAD
   // Generar pdf y guardarlo en servidor
   if(!generate_pdf(UPLOADS.$filename, $html)) {
     json_output(json_build(400, null, 'Hubo un problema al generar la cotización.'));
@@ -550,3 +551,6 @@ function hook_send_quote() {
 
   json_output(json_build(200, $quote, 'Cotización enviada con éxito.'));
 }
+=======
+}
+>>>>>>> 2062c053957201c9744712912450e1f2bad88e93
