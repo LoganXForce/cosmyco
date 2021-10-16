@@ -10,7 +10,7 @@ El pruyecto tiene una integración con composer y phpunit. Para Instalar el proy
 
 ## Test de pruebas unitarias
 
-La integracion de php unit permite hacer pruebas unitarias y de integracion para ejecutar los test del proyecto ejecute el siguiente comando.
+La integracion de php unit permite hacer pruebas unitarias y de integracion. Para ejecutar los test del proyecto ejecute el siguiente comando.
 
 `./vendor/bin/phpunit tests`
 
