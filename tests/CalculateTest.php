@@ -5,10 +5,10 @@ use App\Src\Functions;
 
 use PHPUnit\Framework\TestCase;
 
-class Calculate extends TestCase{
+class CalculateTest extends TestCase{
     public function test(){
        
-        $this->assertEquals('hello',Functions::hello());
+        $this->assertEquals(2,Functions::calculate());
     }
 
     
