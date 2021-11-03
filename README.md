@@ -27,7 +27,7 @@ Un ejemplo de como se aplica php unit es tomando como referencia la clase Render
 ![](/ClassTesting.PNG)
 
 
-CI/CD proytect Cotizador by Raul Pech
+CI/CD proyect Cotizador by Raul Pech
 
 
 
