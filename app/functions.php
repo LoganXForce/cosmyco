@@ -16,7 +16,7 @@ class Functions
       return 1+1;
   }
   public static function get_view($view_name) {
-    $view = $_SERVER["DOCUMENT_ROOT"].'\udemy_cotizador\templates\views\\'.$view_name.'View.php';
+    $view = $_SERVER["DOCUMENT_ROOT"].'\cotizador-cos\templates\views\\'.$view_name.'View.php';
        // echo $_SERVER["DOCUMENT_ROOT"];
     if(!is_file($view)) {
       // die('La vista no existe');
