@@ -1,12 +1,11 @@
 stages:          # List of stages for jobs, and their order of execution
-  - serverup
+  - deploy
 
 
 heroku:
- stage: 
-   -serverup
+ stage: deploy
  only:
-   - master
+ - master
  script:
-   - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/<Your heroku app name>.git
-   - git push -f heroku master
+ - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/cotizadorcmc.git
+ - git push -f heroku master
