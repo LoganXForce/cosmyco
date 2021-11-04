@@ -5,5 +5,3 @@ require_once 'app/config.php';
 
 // Renderizado de la vista
 Functions::get_view('index');
-
-echo 'Hola mundo';
