@@ -19,10 +19,11 @@ stages:          # List of stages for jobs, and their order of execution
 
 serverup-job:
     stage: serverup
+    
     only:
      - master
-    script:
     
+    script:
      - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/cotizadorcmc.git
      - git push heroku master
      
