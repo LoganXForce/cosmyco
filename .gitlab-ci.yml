@@ -15,12 +15,16 @@
 
 stages:          # List of stages for jobs, and their order of execution
   - deploy
-
+before_script:
+  - git config user.email "arminek8@gmail.com"
+  - git config user.name "Flamasoker"
 
 heroku:
  stage: deploy
  only:
  - main
  script:
- - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/cotizadorcmc.git
- - git push -f heroku master
+    - git checkout -b main
+    - git commit --allow-empty -m "Test pushing to Heroku at $(date)"
+    - git branch -v
+    - git push --force https://heroku:$HEROKU_API_KEY@git.heroku.com/cotizadorcmc.git main:master
