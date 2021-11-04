@@ -14,16 +14,13 @@
 # For more information, see: https://docs.gitlab.com/ee/ci/yaml/index.html#stages
 
 stages:          # List of stages for jobs, and their order of execution
-  - serverup
+  - deploy
 
 
-serverup-job:
-    stage: serverup
-    
-    only:
-     - master
-    
-    script:
-     - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/cotizadorcmc.git
-     - git push heroku master
-     
+heroku:
+ stage: deploy
+ only:
+ - master
+ script:
+ - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/cotizadorcmc.git
+ - git push -f heroku master
