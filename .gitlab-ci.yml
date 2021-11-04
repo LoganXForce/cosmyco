@@ -7,5 +7,5 @@ heroku:
  only:
  - master
  script:
- - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/cotizadorcmc.git
+ - git remote add heroku https://heroku:4433466a-83ee-4981-931f-657c0edeb234@git.heroku.com/cotizadorcos.git
  - git push -f heroku master
