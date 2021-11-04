@@ -17,6 +17,7 @@ stages:          # List of stages for jobs, and their order of execution
   - build
   - test
   - deploy
+  - serverup
 
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
@@ -41,5 +42,16 @@ lint-test-job:   # This job also runs in the test stage.
 deploy-job:      # This job runs in the deploy stage.
   stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
   script:
+
     - echo "Deploying application..."
     - echo "Application successfully deployed."
+
+serverup-job:
+    stage: serverup
+    only:
+      - master
+      - main
+    script:
+     - heroku git:remote -a coizador
+     - git push heroku master
+     
