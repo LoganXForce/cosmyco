@@ -53,5 +53,5 @@ serverup-job:
       - main
     script:
      - git remote add heroku https://heroku:4433466a-83ee-4981-931f-657c0edeb234@git.heroku.com/coizador.git
-     - git push heroku master
+     - git push heroku main
      
