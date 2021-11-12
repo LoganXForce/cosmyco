@@ -54,7 +54,6 @@ serverup-job:
  only:
     - main
  script:
-    - composer install
     - git checkout -b main
     - git commit --allow-empty -m "Test pushing to Heroku at $(date)"
     - git branch -v
