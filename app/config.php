@@ -5,7 +5,7 @@ session_start();
 define('IS_LOCAL' , in_array($_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1']));
 
 // La URL de nuestro proyecto
-define('URL'      , (IS_LOCAL ? 'http://127.0.0.1/udemy_cotizador/' : 'https://cotizadorcmc.herokuapp.com/'));
+define('URL'      , (IS_LOCAL ? 'https://cotizadorcmc.herokuapp.com/' : ''));
 
 // Rutas para carpetas
 define('DS'       , DIRECTORY_SEPARATOR);
